@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailActivity"
+    android:background="#303030">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/collapsingtoolbar_id"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:title="@string/name_bar"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:theme="@style/ThemeOverlay.AppCompat.Light">
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/aa_thumbnail"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/loading_shape"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/avatar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/cons"
+         android:padding="20dp"
+         android:layout_marginTop="10dp">
+         <TextView
+             android:text="@string/username"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/aa_description"
+             app:layout_constraintTop_toTopOf="@id/cons"
+             app:layout_constraintStart_toStartOf="@id/cons"/>
+         <TextView
+             android:text="@string/location"
+             android:layout_marginTop="20dp"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/aa_description1"
+             app:layout_constraintTop_toBottomOf="@id/aa_description"
+             app:layout_constraintStart_toStartOf="@id/cons"/>
+
+
+
+         <TextView
+             android:text="@string/company"
+             android:layout_marginTop="20dp"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/aa_description2"
+             app:layout_constraintTop_toBottomOf="@id/aa_description1"
+             app:layout_constraintStart_toStartOf="@id/cons"/>
+
+         <TextView
+             android:text="@string/unknown"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/username_dtl"
+             android:layout_marginStart="15dp"
+             app:layout_constraintTop_toTopOf="@id/cons"
+             app:layout_constraintStart_toEndOf="@id/aa_description"/>
+
+         <TextView
+             android:text="@string/unknown"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/location_dtl"
+             android:layout_marginStart="15dp"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toBottomOf="@id/username_dtl"
+             app:layout_constraintStart_toEndOf="@id/aa_description"/>
+
+         <TextView
+             android:text="@string/unknown"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/company_dtl"
+             android:layout_marginStart="15dp"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toBottomOf="@id/location_dtl"
+             app:layout_constraintStart_toEndOf="@id/aa_description"/>
+
+         <TextView
+             android:id="@+id/repo"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginTop="20dp"
+             android:text="@string/repository"
+             app:layout_constraintTop_toBottomOf="@id/aa_description2"
+             app:layout_constraintStart_toStartOf="@id/cons"/>
+
+         <TextView
+             android:text="@string/unknown"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:id="@+id/repository_dtl"
+             android:layout_marginStart="15dp"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toBottomOf="@id/company_dtl"
+             app:layout_constraintStart_toEndOf="@id/repo"/>
+
+         <TextView
+             android:id="@+id/flng"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginTop="40dp"
+             android:text="@string/following"
+             app:layout_constraintEnd_toStartOf="@id/repository_dtl"
+             app:layout_constraintStart_toEndOf="@+id/username_dtl"
+             app:layout_constraintTop_toBottomOf="@id/repository_dtl" />
+
+         <TextView
+             android:id="@+id/following_dtl"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginTop="5dp"
+             android:text="@string/unknown"
+             app:layout_constraintEnd_toStartOf="@id/repository_dtl"
+             app:layout_constraintStart_toEndOf="@+id/username_dtl"
+             app:layout_constraintTop_toBottomOf="@id/flng" />
+
+
+
+         <TextView
+             android:id="@+id/flwr"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginTop="40dp"
+             android:text="@string/followers"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@id/repository_dtl"
+             app:layout_constraintTop_toBottomOf="@id/repository_dtl" />
+
+         <TextView
+             android:id="@+id/follower_dtl"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginTop="5dp"
+             android:text="@string/unknown"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@id/repository_dtl"
+             app:layout_constraintTop_toBottomOf="@id/flwr" />
+
+
+
+
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

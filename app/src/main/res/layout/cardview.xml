@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="175dp">
+
+    <ImageView
+        android:id="@+id/background_crd"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/card_background" />
+
+    <ImageView
+        android:id="@+id/avatar_crd"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/main_avatar" />
+
+    <TextView
+        android:id="@+id/name_crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/name_bar"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/avatar_crd"
+        app:layout_constraintTop_toTopOf="@id/background_crd"/>
+
+    <TextView
+        android:id="@+id/username_crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="italic"
+        android:text="@string/username_main"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/avatar_crd"
+        app:layout_constraintTop_toBottomOf="@+id/name_crd" />
+
+    <TextView
+        android:id="@+id/following_crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/unknown"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/username_crd"
+        app:layout_constraintStart_toEndOf="@id/avatar_crd"/>
+
+    <TextView
+        android:id="@+id/follower_crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/unknown"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/following"
+        app:layout_constraintTop_toBottomOf="@id/username_crd"/>
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="2dp"
+        android:text="@string/following_main"
+       android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/following_crd"
+        app:layout_constraintTop_toBottomOf="@id/username_crd"
+        />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="2dp"
+        android:text="@string/followers_main"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/follower_crd"
+        app:layout_constraintTop_toBottomOf="@id/username_crd"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="70dp"
+        android:layout_height="135dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/background_crd"
+        app:layout_constraintTop_toTopOf="@+id/background_crd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/repository_main"
+            android:textColor="@color/white"
+            android:textSize="8.1sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/repository_crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@id/background_crd"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/background_crd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
