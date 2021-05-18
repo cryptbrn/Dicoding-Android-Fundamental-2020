@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Git Connect</string>
+    <string name="hintusername">Ketikkan Nama Pengguna ....</string>
+    <string name="title_follower">Pengikut</string>
+    <string name="title_following">Mengikuti</string>
+    <string name="progress">Tunggu Sebentar …</string>
+    <string name="change_language_setting">Ubah Bahasa</string>
+    <string name="spacing">||</string>
+    <string name="cover">Cover</string>
+</resources>

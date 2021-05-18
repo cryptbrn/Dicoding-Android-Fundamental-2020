@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Git Connect</string>
+    <string name="hintusername">Type Username Here ....</string>
+    <string name="title_follower">Followers</string>
+    <string name="title_following">Following</string>
+    <string name="progress">Wait …</string>
+    <string name="change_language_setting">Change Language</string>
+    <string name="spacing">||</string>
+    <string name="cover">Cover</string>
+</resources>
